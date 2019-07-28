@@ -1,0 +1,24 @@
+server:
+  servlet:
+    contextPath: /processing-fee-calculator/v1.0
+  port: 8080
+
+spring:
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+sourceFileLocation: /Users/vijmalav/Documents/My_Work/Input_Data/
+targetFileLocation: /Users/vijmalav/Documents/My_Work/Processed_Data/
+reportFileName: Transaction Report.csv
+cron:
+  expression: 0/15 * * * * ?
+
+processingFeeConfig:
+  processingFees:
+    intraday: 10
+    highPriority: 500
+    sellOrWithdraw: 100
+    buyOrDeposit: 50

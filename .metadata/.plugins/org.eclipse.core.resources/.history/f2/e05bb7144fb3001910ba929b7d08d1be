@@ -1,0 +1,19 @@
+package com.ash.java;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class Manager {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		 int numberOfMonths = 1;
+		 LocalDate startDate = LocalDate.now().plusDays(1);
+		 Stream.iterate(startDate, date -> date.plusDays(1))
+		        .limit(numberOfMonths)
+		        .map(currentDate -> System.out::println);
+
+	}
+
+}

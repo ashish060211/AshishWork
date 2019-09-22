@@ -1,0 +1,17 @@
+package com.ash.java;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class Manager {
+
+	public static void main(String[] args) {
+
+		int numberOfMonths = 1;
+		LocalDate startDate = LocalDate.now().plusDays(1);
+		LocalDate endDate = LocalDate.now().plusDays(1).plusMonths(numberOfMonths);
+		long numberOfDays = startDate.until(endDate, ChronoUnit.DAYS);
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.ash.java;
+
+import java.time.LocalDate;
+import java.time.temporal.IsoFields;
+import java.time.temporal.TemporalAdjusters;
+
+public class Manager {
+
+	public static void main(String[] args) {
+
+		LocalDate todayDate = LocalDate.now();
+		int t = todayDate.get(IsoFields.QUARTER_OF_YEAR) ;
+		LocalDate ld = todayDate.withMonth(todayDate.get(IsoFields.QUARTER_OF_YEAR) * 3)
+				.with(TemporalAdjusters.lastDayOfMonth());
+		System.out.println(t);
+	}
+
+}

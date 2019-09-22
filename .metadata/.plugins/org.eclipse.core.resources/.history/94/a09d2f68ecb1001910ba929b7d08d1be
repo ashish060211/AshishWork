@@ -1,0 +1,16 @@
+package com.ash.java;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Manager {
+
+	public static void main(String[] args) throws InterruptedException {
+		 
+		LocalDate startDate = LocalDate.now().plusDays(1);
+		LocalDate endDate = LocalDate.now().plusDays(1).plusMonths(6);
+		System.out.println("startDate==>"+startDate);
+		System.out.println("endDate==>"+endDate);
+	}
+
+}

@@ -1,0 +1,50 @@
+package com.ash.java;
+
+public class TypeConversionExample {
+	public static void main(String args[])  
+    {  
+        byte b;  
+        int i = 257;  
+        double d = 323.142; 
+        System.out.println("Conversion of int to byte.");  
+          
+        System.out.println("-----------------");
+        //i%256 
+        b = (byte) i;  
+        System.out.println("i = " + i + " b = " + b); 
+        System.out.println("\nConversion of double to byte."); 
+          
+        //d%256 
+        b = (byte) d;  
+        System.out.println("d = " + d + " b= " + b); 
+        
+        System.out.println("-----------------");
+        char c = 'a';  //97
+        short s = 1024; 
+        int i2 = 50000; 
+        System.out.println(i2/c);
+        
+        System.out.println("-----------------");
+        System.out.print("Y" + "O"); 
+        System.out.print('L' + 'O'); //when we use single quotes, the characters ‘L’ and ‘O’ are converted to int.
+        //This is called widening primitive conversion. After conversion to integer, 
+        //the numbers are added ( ‘L’ is 76 and ‘O’ is 79) and 155 is printed.
+        
+        System.out.println("-----------------");
+        System.out.print("Y" + "O"); 
+        System.out.print('L'); 
+        System.out.print('O'); 
+        /*
+        t is because the widening primitive conversion happens only when a operator like ‘+’ is present 
+        which expects at least integer on both side.
+
+		Widening primitive conversion is applied to convert either or both operands as specified by the following rules.
+		The result of adding Java chars, shorts or bytes is an int:
+		
+		If either operand is of type double, the other is converted to double.
+		Otherwise, if either operand is of type float, the other is converted to float.
+		Otherwise, if either operand is of type long, the other is converted to long.
+		Otherwise, both operands are converted to type int
+         */
+    } 
+}

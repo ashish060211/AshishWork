@@ -1,0 +1,37 @@
+package executors;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.OptionalLong;
+
+/*
+ * What happen to parallel stream and its result when one or more thread got runtime exception while processing 
+ */
+public class RuntimeExceptionCase {
+
+	public static void main(String[] args) {
+		
+		List<Long> list = new ArrayList<>();
+		for(long i=0;i<100000;i++) {
+			list.add(i);
+		}
+		
+		OptionalLong max = list.parallelStream().mapToLong(i -> {
+			try {
+				return myFunction(i);
+			} catch(Exception e) {
+				System.err.println("i got error "+e.getMessage());
+				return 0;
+			}
+		}).max();
+		System.out.println(max.getAsLong());
+	}
+	
+	static long myFunction(long i) {
+		if(i==100l) {
+			throw new RuntimeException("i got exception....");
+		} else {
+			return i*i;
+		}
+	}
+}

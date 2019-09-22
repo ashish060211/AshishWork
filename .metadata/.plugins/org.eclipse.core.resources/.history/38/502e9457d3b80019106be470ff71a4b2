@@ -1,0 +1,19 @@
+package com.ash.java;
+
+import java.time.LocalDate;
+import java.time.temporal.IsoFields;
+import java.time.temporal.TemporalAdjusters;
+
+public class Manager {
+
+	public static void main(String[] args) {
+
+		LocalDate todayDate = LocalDate.now();
+		LocalDate passedDate = LocalDate.of(2020,4,2);
+		
+		System.out.println(todayDate.plusMonths(6).isAfter(passedDate));
+		
+		
+	}
+
+}

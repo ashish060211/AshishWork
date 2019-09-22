@@ -1,0 +1,60 @@
+package com.mcdonald.service;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import com.mcdonald.dto.BusinessException;
+import com.mcdonald.dto.MenuItemsResponse;
+import com.mcdonald.dto.MenuListResponse;
+import com.mcdonald.dto.MenuListResponse.Menu;
+import com.mcdonald.mock.StaticData;
+import com.mcdonald.model.Item;
+import com.mcdonald.model.Price;
+
+public class MenuService {
+
+	public MenuListResponse getMenuList() {
+		List<Menu> menuList = StaticData.getStaticMenuList().stream()
+				.map(menu -> new MenuListResponse.Menu(menu.getMenuId(), menu.getName())).collect(Collectors.toList());
+		return new MenuListResponse(menuList);
+	}
+
+	public MenuItemsResponse getMenuItems(Integer menuid) {
+		if (menuid == null || menuid.intValue() <= 0) {
+			throw new BusinessException("Invalid Value Received for menuid : " + menuid);
+		}
+		Map<Price, List<Item>> menuByPrice = new HashMap<>();
+		com.mcdonald.model.Menu menu2 = StaticData.getStaticMenuList().stream()
+				.filter(menu -> menuid.equals(menu.getMenuId())).findFirst().get();
+
+		for (Item p : menu2.getItems()) {
+			if (!menuByPrice.containsKey(p.getPrice())) {
+				menuByPrice.put(p.getPrice(), new ArrayList<>());
+			}
+			menuByPrice.get(p.getPrice()).add(p);
+		}
+
+		return new MenuItemsResponse(menuByPrice);
+	}
+
+	public BigDecimal getMenuItemTotal(Integer menuid) {
+		if (menuid == null || menuid.intValue() <= 0) {
+			throw new BusinessException("Invalid Value Received for menuid : " + menuid);
+		}
+		
+		return null;
+	}
+
+	public Integer getActiveSubmenuCount(Integer menuid) {
+		if (menuid == null || menuid.intValue() <= 0) {
+			throw new BusinessException("Invalid Value Received for menuid : " + menuid);
+		}
+		
+		return null;
+	}
+
+}

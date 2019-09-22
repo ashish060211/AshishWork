@@ -1,0 +1,29 @@
+package com.ash.java;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.stream.Stream;
+
+public class Manager {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		/*
+		LocalDate startDate = LocalDate.now().plusDays(1);
+		LocalDate endDate = LocalDate.now().plusDays(1).plusMonths(1);
+		System.out.println("startDate==>"+startDate);
+		System.out.println("endDate==>"+endDate);
+		*/
+		LocalDate startDate = LocalDate.parse("2019-07-29"),
+				endDate   = LocalDate.parse("2019-08-02");
+		
+		int i=0;
+		for (LocalDate date = startDate; date.isBefore(endDate); date = date.plusDays(1))
+		{
+			i++;
+		}
+		System.out.println(i);
+		
+	}
+
+}

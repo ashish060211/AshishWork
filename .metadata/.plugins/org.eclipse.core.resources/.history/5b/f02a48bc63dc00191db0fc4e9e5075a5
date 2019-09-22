@@ -1,0 +1,14 @@
+package com.ash.java.geekforgeek.code;
+
+import java.util.Scanner;
+
+public class FindSubArraySumProblem {
+
+	public static void main(String[] args) {
+		
+		 Scanner sc = new Scanner(System.in);
+		 int tcNum = sc.nextInt();
+
+	}
+
+}

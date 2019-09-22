@@ -1,0 +1,21 @@
+package com.ash.java;
+
+import java.time.LocalDate;
+import java.time.temporal.IsoFields;
+import java.time.temporal.TemporalAdjusters;
+
+public class Manager {
+	
+	public static String STARTDATE_ENDDATE_GAP_ERROR = "difference between startdate and enddate must not be bigger than {} months.";
+
+	public static void main(String[] args) {
+
+		LocalDate todayDate = LocalDate.now();
+		LocalDate passedDate = LocalDate.of(2020,1,2);
+		
+		System.out.println(String.format(STARTDATE_ENDDATE_GAP_ERROR, 6));
+		
+		
+	}
+
+}

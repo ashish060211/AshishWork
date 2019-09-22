@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.ash.java.geekforgeek.code&apos; to &apos;com.ash.java.geekforgeek.code.arrays&apos;&#x0D;&#x0A;- Original project: &apos;JavaPractices&apos;&#x0D;&#x0A;- Original element: &apos;JavaPractices/src/com.ash.java.geekforgeek.code&apos;&#x0D;&#x0A;- Renamed element: &apos;JavaPractices/src/com.ash.java.geekforgeek.code.arrays&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.ash.java.geekforgeek.code&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.ash.java.geekforgeek.code" name="com.ash.java.geekforgeek.code.arrays" qualified="false" references="true" stamp="1569079787368" textual="false" version="1.0"/>
+</session>

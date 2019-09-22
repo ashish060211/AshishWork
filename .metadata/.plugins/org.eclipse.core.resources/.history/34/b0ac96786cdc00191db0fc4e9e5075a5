@@ -1,0 +1,78 @@
+package com.ash.java.geekforgeek.code;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class FindSubArraySumProblem {
+
+	public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+		 int tcNum = sc.nextInt();
+		 
+		 for(int i=0;i<tcNum;i++) {
+			 ArrayInfo arrayInfo = getArrayInfo(sc); 
+			 System.out.println(arrayInfo);
+		 }
+		 sc.close();
+	}
+
+	static int[] convertStringIntoArray(Scanner numArrScanner, int size) {
+		int[] arr = new int[size];
+		for(int i =0;i<size;i++) {
+		while(numArrScanner.hasNextInt()) {
+			arr[i] = numArrScanner.nextInt();
+		}
+		}
+		System.out.println(arr);
+		return arr;
+	}
+	
+	static ArrayInfo getArrayInfo(Scanner sc) {
+		sc.nextLine(); // throw away the newline.
+		Scanner numScanner = new Scanner(sc.nextLine());
+		int size = numScanner.nextInt();
+		int sum = numScanner.nextInt();
+		numScanner.close();
+		sc.nextLine();
+		Scanner numArrScanner = new Scanner(sc.nextLine());
+		int[] array = convertStringIntoArray(numArrScanner, size);
+		numArrScanner.close();
+		return new ArrayInfo(size, sum, array);
+	}
+	
+	static class ArrayInfo {
+		int size;
+		int sum;
+		int[] array;
+		
+		public ArrayInfo(int size, int sum, int[] array) {
+			super();
+			this.size = size;
+			this.sum = sum;
+			this.array = array;
+		}
+		public int getSize() {
+			return size;
+		}
+		public void setSize(int size) {
+			this.size = size;
+		}
+		public int getSum() {
+			return sum;
+		}
+		public void setSum(int sum) {
+			this.sum = sum;
+		}
+		public int[] getArray() {
+			return array;
+		}
+		public void setArray(int[] array) {
+			this.array = array;
+		}
+		@Override
+		public String toString() {
+			return "ArrayInfo [size=" + size + ", sum=" + sum + ", array=" + Arrays.toString(array) + "]";
+		}
+	}
+	
+}

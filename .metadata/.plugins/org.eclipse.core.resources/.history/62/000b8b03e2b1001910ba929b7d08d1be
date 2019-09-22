@@ -1,0 +1,22 @@
+package com.ash.java;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Manager {
+
+	public static void main(String[] args) throws InterruptedException {
+		LocalDate initialDate = LocalDate.parse("2019-08-30");
+		LocalDate finalDate = LocalDate.parse("2019-12-31");
+		int five = Period.between(finalDate, initialDate).getDays();
+		//System.out.println(five);
+		
+		LocalDate givenDate = LocalDate.now();
+		if((initialDate.isEqual(givenDate) || initialDate.isBefore(givenDate)) && finalDate.isAfter(givenDate)) {
+			System.out.println("---------------------");
+		} else {
+			System.out.println("+++++++++++++++");
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+server:
+  port: 8100
+
+endpoints:
+  health:
+    sensitive: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+    shutdown:
+      enabled: true
+
+logging:   
+  level:
+    root: info    

@@ -1,0 +1,7 @@
+mvn clean package docker:build
+docker images
+docker run -d --name=mysvc -p 8100:8100 example
+docker ps
+docker logs mysvc
+curl http://$(boot2docker ip 2>/dev/null):8100
+curl http://localhost:8100

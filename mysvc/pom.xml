@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mysvc</name>
 	<description>Demo project for Spring Boot</description>
-
+	<packaging>jar</packaging>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -35,6 +35,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -45,7 +46,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>1.2.0</version>
 				<configuration>
-					<imageName>example</imageName>
+					<imageName>mysvc</imageName>
 					<dockerDirectory>docker</dockerDirectory>
 					<resources>
 						<resource>
@@ -55,8 +56,7 @@
 						</resource>
 					</resources>
 					<buildArgs>
-						<JAR_FILE>${project.artifactId}-${project.version}.jar</JAR_FILE>
-						<ARTIFACT_ID>${project.artifactId}</ARTIFACT_ID>
+						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
 				</configuration>
 				<executions>
@@ -71,4 +71,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

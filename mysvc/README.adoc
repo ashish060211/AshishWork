@@ -1,6 +1,39 @@
-mvn clean package docker:build
-docker images
-docker run -d --name=mysvc -p 8100:8100 example
+mvn clean package 
+
+mvn clean package docker:build : This command will work same as above but we can keep docker plugin in a separate profile called docker so that when we run mvn clean package it would not execute docker build. Right now we do have separate profile and in last step docker-maven-plugin executes docker build. It first copy docker file and jar to docker folder. Then it run docker build command. 
+
+docker images -a
+By running above command we can see our image. Our image name is mysvc which we define in <imageName> tag in pom file.
+
+docker images -f dangling=true		
+To see dangling images
+
+docker ps -a 
+To list all docker containers. 
+
+docker container ls -a
+To list all running docker containers.
+
+docker rm <<container id>
+To remove container.
+
+docker system prune
+This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - all dangling build cache
+  
+docker image prune -a --filter "until=12h"
+It will remove all images that are created more than 12 hours ago.
+
+docker image rmi <<IMAGE ID>>  
+To delete image
+
+docker build -t mysvc target/docker
+For separately building images we can use above command also.
+
+docker run -d --name=mysvc -p 8100:8100 mysvc
 docker ps
 docker logs mysvc
 curl http://$(boot2docker ip 2>/dev/null):8100

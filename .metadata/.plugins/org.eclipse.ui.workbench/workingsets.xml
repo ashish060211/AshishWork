@@ -8,5 +8,12 @@
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1561657230652_1" label="Java Test Sources" name="Java Test Sources">
 <item elementID="=restaurant-menu/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1569389369204_3" label="extjs-parent" name="extjs-parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/extjs-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/extjs-web" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/extjs-web-services" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/extjs-common-services" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/extjs-model" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1561657259276_2" label="Window Working Set" name="Aggregate for window 1561657259276"/>
 </workingSetManager>

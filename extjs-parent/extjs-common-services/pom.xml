@@ -89,11 +89,6 @@
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-aop</artifactId>
    		 </dependency>
-		<!-- Box API -->
-		<dependency>
-			<groupId>com.box</groupId>
-			<artifactId>box-java-sdk</artifactId>
-		</dependency>
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -103,17 +98,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-		</dependency>
-		<!-- JSON -->
-        <dependency>
-		    <groupId>net.sf.json-lib</groupId>
-		    <artifactId>json-lib</artifactId>
-			<classifier>jdk15</classifier>
-		</dependency>
-		<!-- Email Templates -->
-			<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
 		</dependency>
 		<!-- Testing -->
 		<dependency>

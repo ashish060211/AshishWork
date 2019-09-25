@@ -201,7 +201,7 @@
 		<!-- EXT js Web Services Module dependency -->
 		<dependency>
 			<groupId>com.ash.extjs</groupId>
-			< <artifactId>extjs-web-services</artifactId>
+			<artifactId>extjs-web-services</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

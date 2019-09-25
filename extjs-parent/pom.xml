@@ -33,7 +33,7 @@
 		<spring-data-version>2.0.1.RELEASE</spring-data-version>
 		<hibernate-version>5.2.12.Final</hibernate-version>
 		<hibernate-validator-version>5.4.1.Final</hibernate-validator-version>
-		<jackson-2-version>2.9.8</jackson-2-version>
+		<jackson-2-version>2.9.10</jackson-2-version>
 		<javax-transaction-version>1.2</javax-transaction-version>
 		<sql-server-version>7.2.1.jre8</sql-server-version>
 		<querydsl.version>4.1.4</querydsl.version>

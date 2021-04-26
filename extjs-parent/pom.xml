@@ -40,7 +40,7 @@
 		<commons.dbutils>1.7</commons.dbutils>
 		<commons.version>3.8.1</commons.version>
 		<commonscli.version>1.2</commonscli.version>
-		<commonsio.version>2.4</commonsio.version>
+		<commonsio.version>2.7</commonsio.version>
 		<commonsvalidator.version>1.5.0</commonsvalidator.version>
 		<durian.version>3.4.0</durian.version>
 		<ehcache.version>2.10.3</ehcache.version>
